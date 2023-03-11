@@ -1,31 +1,24 @@
-// const cards = [
-//     'Карточка-1',
-//     'Карточка-2',
-//     'Карточка-3',
-//     'Карточка-4',
-//     'Карточка-5',
-//   ];
-
-// /*
-//    * Видалення (по індексу), метод indexOf()
-//    */
-//   const cardToRemove = 'Карточка-3';
-// /*
-//    * Додавання (по індексу)
-//    */
-  
-// const cardToInsert = 'Карточка-6';
-// /*
-//    * Оновлення (по індексу)
-//    */
-//   const cardToUpdate = 'Карточка-4';
-//   const index=cards.indexOf(cardToRemove);
-  
-//   cards.splice(index,1);
-  
-//   const index2=cards.length
-//   cards.splice(index2,0,cardToInsert);
-
-// const index3=cards.indexOf(cardToUpdate)
-// cards.splice(index3,1,"Карточка")
-//   console.log(cards);
+const scientists = [
+{ name: "Albert", surname: "Einstein", born: 1879, dead: 1955, id: 1 },
+{ name: "Isaac", surname: "Newton", born: 1643, dead: 1727, id: 2 },
+{ name: "Galileo", surname: "Galilei", born: 1564, dead: 1642, id: 3 },
+{ name: "Marie", surname: "Curie", born: 1867, dead: 1934, id: 4 },
+{ name: "Johannes", surname: "Kepler", born: 1571, dead: 1630, id: 5 },
+{ name: "Nicolaus", surname: "Copernicus", born: 1473, dead: 1543, id: 6 },
+{ name: "Max", surname: "Planck", born: 1858, dead: 1947},
+{ name: "Katherine", surname: "Blodgett", born: 1898, dead: 1979, id: 8 },
+{ name: "Ada", surname: "Lovelace", born: 1815, dead: 1852, id: 9 },
+{ name: "Sarah E.", surname: "Goode", born: 1855, dead: 1905, id: 10 },
+{ name: "Lise", surname: "Meitner", born: 1878, dead: 1968, id: 11 },
+{ name: "Hanna", surname: "Hammarström", born: 1829, dead: 1909, id: 12 }
+];
+// Федір - знайти вчених прізвище яких починається на літеру С
+const findNamesWithC = scientists.filter((scientist)=>{
+    const surNameWithC = scientist.surname.split("")
+    if (surNameWithC[0] === "C"){
+        
+        return scientist.surname
+        
+    }
+});
+console.log(findNamesWithC)
